@@ -11,7 +11,7 @@ function Audio() {
     return (
         <>
             <h1>Speech Translation</h1>
-            
+
             <div className='buttons'>
                 <div className='home-button'>
                     <button onClick={() => navigate('/')}>Home</button>
