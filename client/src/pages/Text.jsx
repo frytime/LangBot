@@ -7,8 +7,18 @@ import Footer from './components/Footer.jsx';
 
 function Text() {
     const navigate = useNavigate();
+    const flags = [
+        '🇺🇸', '🇬🇧', '🇨🇦', '🇯🇵', '🇧🇷', '🇦🇺', '🇫🇷', '🇮🇹', '🇪🇸', '🇩🇪',
+        '🇲🇽', '🇰🇷', '🇨🇳', '🇮🇳', '🇲🇦', '🇷🇺', '🇿🇦', '🇳🇿', '🇳🇱', '🇸🇪',
+        '🇳🇴', '🇩🇰', '🇨🇭', '🇨🇴', '🇵🇪', '🇵🇹', '🇦🇷', '🇵🇰', '🇹🇷', '🇲🇲'
+    ];
     return (
         <>
+            <div className="flag-container">
+                {flags.map((flag, index) => (
+                    <div key={index} className="flag" style={{ left: `${Math.random() * 100}%`, animationDuration: `${Math.random() * 5 + 4}s`, animationDelay: `${Math.random() * 3}s` }}>{flag}</div>
+                ))}
+            </div>
             <h1>Text Translation</h1>
             <div className='buttons'>
                 <div className='home-button'>
